@@ -1,0 +1,32 @@
+<mat-card class="example-card">
+  
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+
+      <mat-card-title> {{produit.nom | slice: 0:20}}
+      <span *ngIf="produit.nom.length > 20">
+        ...
+      </span>
+    </mat-card-title>
+    <mat-card-subtitle *ngIf="produit.artiste">{{produit.artiste}}</mat-card-subtitle>
+    <mat-card-subtitle *ngIf="produit.real">{{produit.real  | slice: 0:10}}</mat-card-subtitle>
+   </mat-card-header>
+
+     
+      <img *ngIf="produit.img != ''" mat-card-image src="{{produit.img}}" alt="Photo">
+   
+  
+      <img *ngIf="!produit.img" mat-card-image  [src]="img_default" alt="Photo">
+    
+    <mat-card-content>
+      <p  *ngIf="produit.synopsis" >
+        {{produit.synopsis | slice: 0:150}}
+      
+      <span *ngIf="produit.synopsis.length > 150">
+        ...
+      </span></p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a routerLink="/Product/{{typeProduct}}/{{produit.id}}" mat-button>DETAILS</a>
+    </mat-card-actions>
+  </mat-card>

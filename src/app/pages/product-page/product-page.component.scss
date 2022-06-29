@@ -1,0 +1,28 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display";
+    
+    letter-spacing: 5px;
+  }
+h1 {
+color: aqua;
+font-weight: bold;
+}
+h3 {
+  color:rgb(177, 121, 48);
+  font-style: italic;
+  font-weight: bold;
+}
+  img{
+    width: 350px;
+    height: 500px;
+  }
+  p{
+    text-align: justify;
+    line-height:30px;
+  }
+  #about{
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }

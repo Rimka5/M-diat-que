@@ -1,0 +1,22 @@
+<div class="" id="about">
+    <div class="">
+     <img *ngIf="data.img != ''" src={{data.img}} class=" " alt="Table Setting" width="600" height="750">
+     <img *ngIf="!data.img" mat-card-image src="https://portugalinews.eu/wp-content/uploads/2018/09/film.jpg" alt="Photo">
+
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">{{data.nom}}</h1><br>
+      <h3 class="w3-center" *ngIf="!data.artiste" >{{data.real}} {{data.annee}}</h3>
+      <h3 class="w3-center" *ngIf="!data.real" >{{data.artiste}} {{data.annee}}</h3>
+      <p  *ngIf="data.synopsis != ''" class="w3-large"> {{data.synopsis}} </p>
+      <p class="w3-large w3-text-grey w3-hide-medium">{{data.details}} </p>
+    </div>
+  </div>
+  
+  <hr> 
+  <!-- <p>product-card works!</p>
+  <h2>liste des films</h2>
+  <app-product-list [products]="films"></app-product-list>
+  <h2>liste des albums</h2>
+  <app-product-list [products]="albums"></app-product-list> -->
